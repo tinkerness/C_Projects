@@ -1,0 +1,41 @@
+#include <stdio.h>
+int main()
+{
+  int array[100], n, c, d, swap, t=0;
+
+  printf("Enter number of elements\n");
+  scanf("%d", &n);
+  t++;
+  printf("Enter %d integers\n", n);
+  for (c = 0; c < n; c++)
+  {
+    scanf("%d", &array[c]);
+    t++;
+  }t++;
+
+  for (c = 0 ; c < n-1; c++)
+  { t++;
+    for (d = 0 ; d < n -c- 1; d++)
+    { t++;
+      if (array[d] > array[d+1]) /* For decreasing order use '<' instead of '>' */
+      {
+        swap       = array[d];
+        array[d]   = array[d+1];
+        array[d+1] = swap;
+        t+=3;
+      }t++;
+    }t++;
+  }t++;
+
+  printf("Sorted list in ascending order:\n");
+
+  for (c = 0; c < n; c++)
+  {
+      printf("%d\n", array[c]);
+      t++;
+  }t++;
+     printf("\nTime complexity is: %d",t);
+     printf("\nSpace complexity is: %d.",24+n*4);
+
+  return 0;
+}
