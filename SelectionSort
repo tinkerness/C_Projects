@@ -1,0 +1,45 @@
+#include <stdio.h>
+int main()
+{
+    int A[10],i,j,n,min,temp,c=0;
+    printf("Enter number of elements: ");
+    scanf("%d",&n);
+    //c++;
+    printf("Enter %d elements: ",n);
+    for (i=0;i<n;i++)
+    {
+        scanf("%d",&A[i]);
+        c++;
+    }//c++;
+    for (i=0; i<(n-1); i++)
+    {
+        c++;
+        min=i;
+        for (j=i+1; j<n; j++)
+        {
+            c++;
+            if (A[min] > A[j])
+            {
+                c++;
+                min = j;
+            }c++;
+            if (min != i)
+            {
+                temp = A[i];
+                A[i] = A[min];
+                A[min] = temp;
+                c+=3;
+            }c++;
+        }c++;
+    }c++;
+    
+    printf("Sorted Array is: ");
+    for (i=0; i<n; i++)
+    {
+        c++;
+        printf("%d\t", A[i]);
+    }c++;
+    printf("\nTime complexity is: %d.",c);
+    printf("\nSpace complexity is: %d.",24+n*4);
+    return 0;
+}
